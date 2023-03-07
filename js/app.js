@@ -1,5 +1,3 @@
-// import {QRCode} from '../js/qrcode'
-
 const body = document.body
 const textField = document.querySelectorAll('.text.field')
 const form = document.querySelector('.form')
@@ -10,7 +8,6 @@ const qrcode = document.querySelector('#qrcode')
 
 
 let backgroundNumber = 0
-// let qr = new QRCode()
 
 form.addEventListener('submit', generateQR)
 
@@ -27,9 +24,6 @@ function changeBg() {
 
 function changeText() {
     textField[backgroundNumber - 1].classList.add('active')
-    // const fields = [...textField]
-    // console.log(fields[0])
-    // console.log(textField)
 }
 
 function clearTextFields() {
