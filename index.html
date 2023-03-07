@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+</head>
+<body>
+    
+  <div class="container">
+    <div class="text field active">
+      <h1>О нас</h1>
+      <div class="text">&nbsp;&nbsp;&nbsp;&nbsp;Добро пожаловать в автомойку «Авто-Клиника»! Мы предлагаем профессиональные услуги по уходу за автомобилем. Наши специалисты предоставят вам качественное обслуживание и помогут поддерживать ваш автомобиль в хорошем состоянии.
+        <br>
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Наша команда профессиональных механиков имеет большой опыт и знания в области автотехники. Мы гарантируем высокое качество наших услуг и предлагаем конкурентные цены.</div>
+    </div>
+    <div class="text field">
+      <h1>Часы работы</h1>
+      <div class="text">Понедельник: с 8:00 до 20:00
+        <br>
+        Вторник: с 8:00 до 20:00
+        <br>
+        Среда: с 8:00 до 20:00
+        <br>
+        Четверг: с 8:00 до 20:00
+        <br>
+        Пятница: с 8:00 до 20:00
+        <br>
+        Суббота: с 8:00 до 18:00
+        <br>
+        Воскресенье: закрыто</div>
+    </div>
+    <div class="text field">
+      <h1>Контакты</h1>
+      <div class="text">Адрес: г. Майкоп, ул. Ленина, д. 10
+        <br><br>
+        Телефон: +7 (495) 123-45-67</div>
+    </div>
+
+    <div class="qr field" id="blank">
+      <h1>Получите карту постоянного клиента</h1>
+      <form class="form">
+        <input type="email" id="email" placeholder="Введите адрес электронной почты">
+        <button type="submit">Отправить</button>
+      </form>
+    </div>
+
+    <div class="qr field" id="filled">
+      <div id="qrcode"></div>
+      <script type="text/javascript">
+        if (localStorage.getItem('data')) {
+          new QRCode(document.getElementById("qrcode"), JSON.parse(localStorage.getItem('data')).uuid);
+        }
+      </script>
+    </div>
+  </div>  
+
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.js"></script> -->
+  <script src="../js/app.js"></script>
+</body>
+</html>
