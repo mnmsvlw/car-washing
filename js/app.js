@@ -16,7 +16,7 @@ changeBg()
 
 function changeBg() {
     backgroundNumber === 3 ? backgroundNumber = 1 : backgroundNumber++
-    body.style.backgroundImage = `url(../assets/img/${backgroundNumber}.jpg)`;
+    body.style.backgroundImage = `url(assets/img/${backgroundNumber}.jpg)`;
     clearTextFields()
     changeText()
     setTimeout(changeBg, 5000)
